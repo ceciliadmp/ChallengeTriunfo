@@ -13,6 +13,21 @@
 		2E4D6F1D2874598C00C3D853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4D6F1B2874598C00C3D853 /* Main.storyboard */; };
 		2E4D6F1F2874598D00C3D853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4D6F1E2874598D00C3D853 /* Assets.xcassets */; };
 		2E4D6F222874598D00C3D853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4D6F202874598D00C3D853 /* LaunchScreen.storyboard */; };
+		2E836E24287D960D0049F369 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E23287D960D0049F369 /* Movie.swift */; };
+		2E836E2B287DA4AF0049F369 /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E26287DA4AF0049F369 /* Movie+Upcoming.swift */; };
+		2E836E2C287DA4AF0049F369 /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E27287DA4AF0049F369 /* Movie+NowPlaying.swift */; };
+		2E836E2D287DA4AF0049F369 /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E28287DA4AF0049F369 /* Movie+TrendingThisWeek.swift */; };
+		2E836E2E287DA4AF0049F369 /* Movie+TrendingToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E29287DA4AF0049F369 /* Movie+TrendingToday.swift */; };
+		2E836E2F287DA4AF0049F369 /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E2A287DA4AF0049F369 /* Movie+Popular.swift */; };
+		2E836E3A287DC1610049F369 /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E39287DC1610049F369 /* FeaturedViewController+UICollectionViewDataSource.swift */; };
+		2E836E3B287DC4470049F369 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E37287DB3C90049F369 /* Cairo-Black.ttf */; };
+		2E836E3C287DC44D0049F369 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E31287DB3C90049F369 /* Cairo-Bold.ttf */; };
+		2E836E3D287DC44F0049F369 /* Cairo-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E33287DB3C90049F369 /* Cairo-ExtraBold.ttf */; };
+		2E836E3E287DC4510049F369 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E35287DB3C90049F369 /* Cairo-ExtraLight.ttf */; };
+		2E836E3F287DC4530049F369 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E34287DB3C90049F369 /* Cairo-Light.ttf */; };
+		2E836E40287DC4550049F369 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E38287DB3C90049F369 /* Cairo-Medium.ttf */; };
+		2E836E41287DC4570049F369 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E32287DB3C90049F369 /* Cairo-Regular.ttf */; };
+		2E836E42287DC4590049F369 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E36287DB3C90049F369 /* Cairo-SemiBold.ttf */; };
 		2EE6764A287C45E6008C9211 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE67649287C45E6008C9211 /* PopularCollectionViewCell.swift */; };
 		2EE6764C287C4669008C9211 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6764B287C4669008C9211 /* NowPlayingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +41,21 @@
 		2E4D6F1E2874598D00C3D853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E4D6F212874598D00C3D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E4D6F232874598D00C3D853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E836E23287D960D0049F369 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2E836E26287DA4AF0049F369 /* Movie+Upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Upcoming.swift"; sourceTree = "<group>"; };
+		2E836E27287DA4AF0049F369 /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
+		2E836E28287DA4AF0049F369 /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
+		2E836E29287DA4AF0049F369 /* Movie+TrendingToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingToday.swift"; sourceTree = "<group>"; };
+		2E836E2A287DA4AF0049F369 /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
+		2E836E31287DB3C90049F369 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		2E836E32287DB3C90049F369 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		2E836E33287DB3C90049F369 /* Cairo-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2E836E34287DB3C90049F369 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		2E836E35287DB3C90049F369 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		2E836E36287DB3C90049F369 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		2E836E37287DB3C90049F369 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		2E836E38287DB3C90049F369 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
+		2E836E39287DC1610049F369 /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		2EE67649287C45E6008C9211 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		2EE6764B287C4669008C9211 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,6 +74,7 @@
 		2E4D6F092874598C00C3D853 = {
 			isa = PBXGroup;
 			children = (
+				2E836E30287DB3B90049F369 /* Fonts */,
 				2E4D6F142874598C00C3D853 /* ChallengeTriunfo */,
 				2E4D6F132874598C00C3D853 /* Products */,
 			);
@@ -62,6 +93,7 @@
 			children = (
 				2E4D6F152874598C00C3D853 /* AppDelegate.swift */,
 				2E4D6F172874598C00C3D853 /* SceneDelegate.swift */,
+				2E836E25287D96180049F369 /* Model */,
 				2EE6764F287C47E5008C9211 /* SupportingFiles */,
 				2EE6764D287C46F0008C9211 /* Controllers */,
 				2EE6764E287C4721008C9211 /* View */,
@@ -69,10 +101,39 @@
 			path = ChallengeTriunfo;
 			sourceTree = "<group>";
 		};
+		2E836E25287D96180049F369 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E836E27287DA4AF0049F369 /* Movie+NowPlaying.swift */,
+				2E836E2A287DA4AF0049F369 /* Movie+Popular.swift */,
+				2E836E28287DA4AF0049F369 /* Movie+TrendingThisWeek.swift */,
+				2E836E29287DA4AF0049F369 /* Movie+TrendingToday.swift */,
+				2E836E26287DA4AF0049F369 /* Movie+Upcoming.swift */,
+				2E836E23287D960D0049F369 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E836E30287DB3B90049F369 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2E836E37287DB3C90049F369 /* Cairo-Black.ttf */,
+				2E836E31287DB3C90049F369 /* Cairo-Bold.ttf */,
+				2E836E33287DB3C90049F369 /* Cairo-ExtraBold.ttf */,
+				2E836E35287DB3C90049F369 /* Cairo-ExtraLight.ttf */,
+				2E836E34287DB3C90049F369 /* Cairo-Light.ttf */,
+				2E836E38287DB3C90049F369 /* Cairo-Medium.ttf */,
+				2E836E32287DB3C90049F369 /* Cairo-Regular.ttf */,
+				2E836E36287DB3C90049F369 /* Cairo-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2EE6764D287C46F0008C9211 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				2E4D6F192874598C00C3D853 /* FeaturedViewController.swift */,
+				2E836E39287DC1610049F369 /* FeaturedViewController+UICollectionViewDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,9 +216,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E836E40287DC4550049F369 /* Cairo-Medium.ttf in Resources */,
+				2E836E42287DC4590049F369 /* Cairo-SemiBold.ttf in Resources */,
 				2E4D6F222874598D00C3D853 /* LaunchScreen.storyboard in Resources */,
+				2E836E3C287DC44D0049F369 /* Cairo-Bold.ttf in Resources */,
 				2E4D6F1F2874598D00C3D853 /* Assets.xcassets in Resources */,
+				2E836E41287DC4570049F369 /* Cairo-Regular.ttf in Resources */,
+				2E836E3D287DC44F0049F369 /* Cairo-ExtraBold.ttf in Resources */,
 				2E4D6F1D2874598C00C3D853 /* Main.storyboard in Resources */,
+				2E836E3E287DC4510049F369 /* Cairo-ExtraLight.ttf in Resources */,
+				2E836E3F287DC4530049F369 /* Cairo-Light.ttf in Resources */,
+				2E836E3B287DC4470049F369 /* Cairo-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +237,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E836E2B287DA4AF0049F369 /* Movie+Upcoming.swift in Sources */,
+				2E836E2E287DA4AF0049F369 /* Movie+TrendingToday.swift in Sources */,
+				2E836E2F287DA4AF0049F369 /* Movie+Popular.swift in Sources */,
 				2EE6764C287C4669008C9211 /* NowPlayingCollectionViewCell.swift in Sources */,
+				2E836E3A287DC1610049F369 /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				2EE6764A287C45E6008C9211 /* PopularCollectionViewCell.swift in Sources */,
+				2E836E2D287DA4AF0049F369 /* Movie+TrendingThisWeek.swift in Sources */,
+				2E836E24287D960D0049F369 /* Movie.swift in Sources */,
+				2E836E2C287DA4AF0049F369 /* Movie+NowPlaying.swift in Sources */,
 				2E4D6F1A2874598C00C3D853 /* FeaturedViewController.swift in Sources */,
 				2E4D6F162874598C00C3D853 /* AppDelegate.swift in Sources */,
 				2E4D6F182874598C00C3D853 /* SceneDelegate.swift in Sources */,
