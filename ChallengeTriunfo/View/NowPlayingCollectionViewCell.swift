@@ -9,13 +9,21 @@ import UIKit
 
 class NowPlayingCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var image: UIImageView!
+    static let cellIdentifier = "nowPlayingCell"
+    
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
         
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        titleLabel.font = UIFont(name: "Cairo-Black", size: 16)
+    func setup(title: String, year: String, image: UIImage){
+        titleLabel.text = title
+        dateLabel.text = year
+        imageView.image = image
+        
+        imageView.layer.cornerRadius =  self.frame.height / 16.0
+        imageView.layer.masksToBounds = true
     }
     
-}
+    }
+    
+

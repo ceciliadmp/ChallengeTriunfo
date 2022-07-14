@@ -6,7 +6,7 @@
 //
 
 import UIKit
-extension FeaturedViewController {
+extension FeaturedViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -14,28 +14,57 @@ extension FeaturedViewController {
             return popularMovies.count
         } else if collectionView == self.nowplayingCollectionView {
             return nowPlayingMovies.count
+        }   else if collectionView == self.upcomingCollectionView {
+            return upComingMovies.count
         }   else {
             return 0
         }
         
     }
         
-    fileprivate func makePopularCell(_ indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = popularCollectionView.dequeueReusableCell(withReuseIdentifier: "popularCell", for: indexPath) as? PopularCollectionViewCell
-        cell?.titleLabel.text = popularMovies[indexPath.item].title
-        cell?.image.image = UIImage(named: popularMovies[indexPath.item].backdrop)
+    fileprivate func makePopularCell(_ indexPath: IndexPath) -> PopularCollectionViewCell {
+        let cell = popularCollectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.cellIdentifier, for: indexPath) as? PopularCollectionViewCell
         
-        return cell ?? UICollectionViewCell()
+        cell?.setup(title: popularMovies[indexPath.item].title, image: UIImage(named: popularMovies[indexPath.item].backdrop) ?? UIImage())
+        
+        //cell?.titleLabel.text = popularMovies[indexPath.item].title
+       //cell?.imageView.image = UIImage(named: popularMovies[indexPath.item].backdrop)
+        
+        return cell ?? PopularCollectionViewCell()
     }
     
-    fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = nowplayingCollectionView.dequeueReusableCell(withReuseIdentifier: "nowPlayingCell", for: indexPath) as? NowPlayingCollectionViewCell
+    fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> NowPlayingCollectionViewCell {
+        let cell = nowplayingCollectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell
         
-        cell?.titleLabel.text = nowPlayingMovies[indexPath.item].title
-        cell?.dateLabel.text = nowPlayingMovies[indexPath.item].releaseDate
-        cell?.image.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
+        let year: String = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
         
-        return cell ?? UICollectionViewCell()
+        cell?.setup(title: nowPlayingMovies[indexPath.item].title,
+                    year: year,
+                    image: UIImage(named: nowPlayingMovies[indexPath.item].poster) ??
+                    UIImage())
+        
+        //cell?.titleLabel.text = nowPlayingMovies[indexPath.item].title
+        //cell?.dateLabel.text = year
+        //cell?.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
+        
+        return cell ?? NowPlayingCollectionViewCell()
+    }
+    
+    fileprivate func upComingCell(_ indexPath: IndexPath) -> UpComingCollectionViewCell {
+        let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: UpComingCollectionViewCell.cellIdentifier, for: indexPath) as? UpComingCollectionViewCell
+        
+        let year: String = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
+        
+        cell?.setup(title: upComingMovies[indexPath.item].title,
+                    year: year,
+                    image: UIImage(named: upComingMovies[indexPath.item].poster) ??
+                    UIImage())
+        
+        //cell?.titleLabel.text = nowPlayingMovies[indexPath.item].title
+        //cell?.dateLabel.text = year
+        //cell?.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
+        
+        return cell ?? UpComingCollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,9 +72,15 @@ extension FeaturedViewController {
         if collectionView == self.popularCollectionView {
             
             return makePopularCell(indexPath)
+                                   
         } else if collectionView == self.nowplayingCollectionView {
-            return makeNowPlayingCell(indexPath)
             
+                return makeNowPlayingCell(indexPath)
+                
+            } else if collectionView == self.upcomingCollectionView {
+                
+                return upComingCell(indexPath)
+                
         } else {
             return UICollectionViewCell()
         }
