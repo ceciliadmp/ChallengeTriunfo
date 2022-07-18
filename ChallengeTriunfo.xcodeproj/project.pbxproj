@@ -31,6 +31,9 @@
 		2E836E44287EF0F90049F369 /* UpComingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E43287EF0F90049F369 /* UpComingCollectionViewCell.swift */; };
 		2E836E46287EF20C0049F369 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E45287EF20C0049F369 /* DetailsViewController.swift */; };
 		2E836E48287EF4A60049F369 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E47287EF4A60049F369 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
+		2E836E4C288197560049F369 /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E836E4B288197560049F369 /* TMDB-Info.plist */; };
+		2E836E4E28819D840049F369 /* Movie+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E4D28819D840049F369 /* Movie+API.swift */; };
+		2E836E502881AE880049F369 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E836E4F2881AE880049F369 /* MovieResponse.swift */; };
 		2EE6764A287C45E6008C9211 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE67649287C45E6008C9211 /* PopularCollectionViewCell.swift */; };
 		2EE6764C287C4669008C9211 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6764B287C4669008C9211 /* NowPlayingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,9 @@
 		2E836E43287EF0F90049F369 /* UpComingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingCollectionViewCell.swift; sourceTree = "<group>"; };
 		2E836E45287EF20C0049F369 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		2E836E47287EF4A60049F369 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		2E836E4B288197560049F369 /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
+		2E836E4D28819D840049F369 /* Movie+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+API.swift"; sourceTree = "<group>"; };
+		2E836E4F2881AE880049F369 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		2EE67649287C45E6008C9211 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		2EE6764B287C4669008C9211 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,12 +116,14 @@
 		2E836E25287D96180049F369 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2E836E4D28819D840049F369 /* Movie+API.swift */,
 				2E836E27287DA4AF0049F369 /* Movie+NowPlaying.swift */,
 				2E836E2A287DA4AF0049F369 /* Movie+Popular.swift */,
 				2E836E28287DA4AF0049F369 /* Movie+TrendingThisWeek.swift */,
 				2E836E29287DA4AF0049F369 /* Movie+TrendingToday.swift */,
 				2E836E26287DA4AF0049F369 /* Movie+Upcoming.swift */,
 				2E836E23287D960D0049F369 /* Movie.swift */,
+				2E836E4F2881AE880049F369 /* MovieResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			children = (
 				2E4D6F1E2874598D00C3D853 /* Assets.xcassets */,
 				2E4D6F232874598D00C3D853 /* Info.plist */,
+				2E836E4B288197560049F369 /* TMDB-Info.plist */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 				2E4D6F222874598D00C3D853 /* LaunchScreen.storyboard in Resources */,
 				2E836E3C287DC44D0049F369 /* Cairo-Bold.ttf in Resources */,
 				2E4D6F1F2874598D00C3D853 /* Assets.xcassets in Resources */,
+				2E836E4C288197560049F369 /* TMDB-Info.plist in Resources */,
 				2E836E41287DC4570049F369 /* Cairo-Regular.ttf in Resources */,
 				2E836E3D287DC44F0049F369 /* Cairo-ExtraBold.ttf in Resources */,
 				2E4D6F1D2874598C00C3D853 /* Main.storyboard in Resources */,
@@ -259,8 +269,10 @@
 				2E4D6F1A2874598C00C3D853 /* FeaturedViewController.swift in Sources */,
 				2E836E48287EF4A60049F369 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				2E836E46287EF20C0049F369 /* DetailsViewController.swift in Sources */,
+				2E836E502881AE880049F369 /* MovieResponse.swift in Sources */,
 				2E4D6F162874598C00C3D853 /* AppDelegate.swift in Sources */,
 				2E4D6F182874598C00C3D853 /* SceneDelegate.swift in Sources */,
+				2E836E4E28819D840049F369 /* Movie+API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +424,7 @@
 				DEVELOPMENT_TEAM = Z95B752C77;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChallengeTriunfo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "MARIA PINHEIRO";
+				INFOPLIST_KEY_CFBundleDisplayName = Lookie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -442,7 +454,7 @@
 				DEVELOPMENT_TEAM = Z95B752C77;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChallengeTriunfo/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "MARIA PINHEIRO";
+				INFOPLIST_KEY_CFBundleDisplayName = Lookie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

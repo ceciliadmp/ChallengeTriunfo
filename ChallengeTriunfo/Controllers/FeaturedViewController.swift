@@ -9,9 +9,9 @@ import UIKit
 
 class FeaturedViewController: UIViewController {
     
-    let popularMovies = Movie.popularMovies()
-    let nowPlayingMovies = Movie.nowPlayingMovies()
-    let upComingMovies = Movie.upcomingMovies()
+    var popularMovies: [Movie] = []//Movie.popularMovies()
+    var nowPlayingMovies: [Movie] = [] //Movie.nowPlayingMovies()
+    var upComingMovies: [Movie] = [] //Movie.upcomingMovies()
     
 
     @IBOutlet weak var popularCollectionView: UICollectionView!
@@ -31,22 +31,34 @@ class FeaturedViewController: UIViewController {
         upcomingCollectionView.dataSource = self
         upcomingCollectionView.delegate = self
         
+        
+        
+        
+        
+        Task {
+            popularMovies = await Movie.popularMoviesAPI()
+            self.popularCollectionView.reloadData()
+            
+            nowPlayingMovies = await Movie.nowPlayingAPI()
+            self.nowplayingCollectionView.reloadData()
+            
+            upComingMovies = await Movie.upComingAPI()
+            self.upcomingCollectionView.reloadData()
+        }
+        
+        
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
+        
         let gradient = CAGradientLayer()
-        let col1 = UIColor.darkGray
-        let col2 = UIColor.black
-        
-        gradient.colors = [col1.cgColor, col2.cgColor, col1.cgColor]
-        gradient.locations = [0.0, 1.0]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
-        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        
+        gradient.frame = self.view.bounds
+        gradient.colors = [UIColor(named: "roxinhoLegal")?.cgColor, UIColor(named: "roxinhoChato")?.cgColor]
         self.view.layer.insertSublayer(gradient, at: 0)
+
+        
     }
     
     
